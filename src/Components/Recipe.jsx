@@ -3,7 +3,7 @@
 import './../index.css';
 
 const Recipe = () => {
-	return <div></div>;
+	return <div>test</div>;
 };
 
 export default Recipe;
