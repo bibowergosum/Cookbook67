@@ -18,16 +18,23 @@ const HomePage = () => {
 			.catch((err) => console.error(err));
 	}, []);
 	return (
-		<Container>
+		<Container maxWidth='100%'>
 			<header>
 				<Header />
 			</header>
 			<main>
-				<Box sx={{ flexGrow: 1, margin: '2em 0' }}>
-					<Grid container spacing={2} justifyContent='center'>
+				<Box sx={{ flexGrow: '1', margin: '2em 0' }}>
+					<Grid container spacing={5} justifyContent='center'>
 						{recipes.map((recipe, i) => {
 							return (
-								<Grid key={i} item xs={9} sm={6} md={4} lg={3}>
+								<Grid key={i} item xs={10} sm={6} md={4} lg={3} xl={2}>
+									<RecipeCard recipe={recipe} />
+								</Grid>
+							);
+						})}
+						{recipes.map((recipe, i) => {
+							return (
+								<Grid key={i} item xs={10} sm={6} md={4} lg={3} xl={2}>
 									<RecipeCard recipe={recipe} />
 								</Grid>
 							);
