@@ -9,16 +9,12 @@ import { CardActionArea } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 export default function MultiActionAreaCard({ recipe }) {
+	console.log(recipe);
 	return (
 		<Card sx={{ boxShadow: 'none' }}>
 			<Link to={'recipe/' + recipe.sys.id} style={{ textDecoration: 'none', color: 'black' }}>
 				<CardActionArea>
-					<CardMedia
-						component='img'
-						height='160'
-						image={recipe.fields.homePicture.fields.file.url}
-						alt={recipe.fields.homePicture.fields.file.title}
-					/>
+					<CardMedia component='img' height='160' image={recipe.fields.homePicture} alt={recipe.fields.homePictureAltText} />
 					<CardContent>
 						<Typography gutterBottom variant='h5' component='div'>
 							{recipe.fields.title}

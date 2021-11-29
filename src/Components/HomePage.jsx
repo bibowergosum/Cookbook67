@@ -1,11 +1,10 @@
 /** @format */
 import RecipeCard from './RecipeCard';
 import { useState, useEffect } from 'react';
-import client from './client';
 import { Grid, Box, Container, CircularProgress } from '@mui/material';
 import Header from './Header';
 import Footer from './Footer';
-// import axios from 'axios';
+import axios from 'axios';
 
 import './../index.css';
 
@@ -14,14 +13,10 @@ const HomePage = () => {
 	const [isLoading, setIsLoading] = useState(true);
 
 	useEffect(() => {
-		// axios
-		// 	.get(`https://cdn.contentful.com/spaces/${process.env.REACT_APP_SPACE_ID}/entries?access_token=${process.env.REACT_APP_ACCESS_TOKEN}`)
-		// 	.then((res) => console.log(res.data))
-		// 	.catch((err) => console.error(err));
 		const fetchData = async () => {
-			client
-				.getEntries()
-				.then((res) => setRecipes(res.items))
+			await axios
+				.get(`https://cdn.contentful.com/spaces/${process.env.REACT_APP_SPACE_ID}/entries?access_token=${process.env.REACT_APP_ACCESS_TOKEN}`)
+				.then((res) => setRecipes(res.data.items))
 				.catch((err) => console.error(err));
 			setIsLoading(false);
 		};
