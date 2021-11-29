@@ -8,7 +8,7 @@ const NavigationDefinition = () => {
 	return (
 		<div>
 			<Routes>
-				<Route path='/home' element={<HomePage />} />
+				<Route path='/' element={<HomePage />} />
 				<Route path='recipe/:id' element={<Recipe />} />
 			</Routes>
 		</div>
