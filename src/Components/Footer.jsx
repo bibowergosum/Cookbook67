@@ -11,7 +11,7 @@ const Footer = () => {
 		color: teal[500],
 	});
 	return (
-		<Container maxWidth id='footer'>
+		<Container maxWidth='100%' id='footer'>
 			<h3>Created by Jonas│Martin│Mattteo</h3>
 
 			<a className='jonLink' href='https://github.com/JoniJo06/CookBook-week6-7.git'>

@@ -9,7 +9,6 @@ import { CardActionArea } from '@mui/material';
 import { Link } from 'react-router-dom';
 
 export default function MultiActionAreaCard({ recipe }) {
-	console.log(recipe);
 	return (
 		<Card sx={{ boxShadow: 'none' }}>
 			<Link to={'recipe/' + recipe.sys.id} style={{ textDecoration: 'none', color: 'black' }}>
