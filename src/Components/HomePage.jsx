@@ -24,7 +24,7 @@ const HomePage = () => {
 	}, []);
 	return (
 		<>
-			<header style={{ width: '100vw' }}>
+			<header>
 				<Header />
 			</header>
 			<Container maxWidth='100%'>
