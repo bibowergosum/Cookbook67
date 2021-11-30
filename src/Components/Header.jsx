@@ -1,7 +1,6 @@
 /** @format */
 
 import './../index.css';
-import { styled } from '@mui/system';
 import { Container } from '@mui/material';
 
 const Header = () => {
