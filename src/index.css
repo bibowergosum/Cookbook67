@@ -48,3 +48,15 @@ code {
 	padding-bottom: 1em;
 	padding-top: 1em;
 }
+
+.RecipeHeader {
+	text-align: center;
+	background: rgb(76, 163, 151);
+	background: -moz-linear-gradient(90deg, rgba(76, 163, 151, 1) 0%, rgba(205, 191, 20, 1) 46%, rgba(0, 212, 255, 1) 100%);
+	background: -webkit-linear-gradient(90deg, rgba(76, 163, 151, 1) 0%, rgba(205, 191, 20, 1) 46%, rgba(0, 212, 255, 1) 100%);
+	background: linear-gradient(90deg, rgba(76, 163, 151, 1) 0%, rgba(205, 191, 20, 1) 46%, rgba(0, 212, 255, 1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4ca397",endColorstr="#00d4ff",GradientType=1);
+	font-variant: small-caps;
+	padding-bottom: 1em;
+	padding-top: 1em;
+}
