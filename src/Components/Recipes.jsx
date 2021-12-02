@@ -5,6 +5,8 @@ import { useState, useEffect } from 'react';
 import { Container } from '@mui/material';
 import axios from 'axios';
 import './../index.css';
+import Footer from './Footer';
+import Header from './Header';
 
 const Recipes = () => {
 	const { id } = useParams();
@@ -31,23 +33,37 @@ const Recipes = () => {
 	// const ingredients = recipe[0].fields.ingredients.content;
 	// console.log(ingredients);
 	return (
-		<>
-			{!isLoading ? (
-				<Container maxWidth='100%' className='Recipes'>
-					<h1 className='RecipeHeader'>{recipe[0].fields.title}</h1>
-					<h3>Zutaten</h3>
-					{recipe[0].fields.ingredients.content.map((el, i) => {
-						return <p key='i'>{el.content[0].value}</p>;
-					})}
+    <>
+      <header>
+        <Header />
+      </header>
+      {!isLoading ? (
+        <Container maxWidth="100%" className="Recipes">
+          <h1 className="recipeHeader">{recipe[0].fields.title}</h1>
+          <div className="imageContainer">
+            <img className="meal" src={recipe[0].fields.picture1} />
+            {recipe[0].fields.picture2 && (
+              <img className="meal" src={recipe[0].fields.picture2} />
+            )}
+          </div>
+          <h3>Zutaten</h3>
+          {recipe[0].fields.ingredients.content.map((el, i) => {
+            return <p key="i">{el.content[0].value}</p>;
+          })}
 
-					<h3> Zubereitung</h3>
-					<div dangerouslySetInnerHTML={{ __html: recipe[0].fields.instructions }}></div>
-				</Container>
-			) : (
-				'loading...'
-			)}
-		</>
-	);
+          <h3> Zubereitung</h3>
+          <div
+            dangerouslySetInnerHTML={{ __html: recipe[0].fields.instructions }}
+          ></div>
+        </Container>
+      ) : (
+        "loading..."
+      )}
+      <footer>
+        <Footer />
+      </footer>
+    </>
+  );
 };
 
 export default Recipes;

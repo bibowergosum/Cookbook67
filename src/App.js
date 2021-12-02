@@ -5,7 +5,7 @@ import NavigationDefinition from './Components/NavigationDefinition';
 import './index.css';
 
 /* *** *** *** *** *** *** *** ***\
-|* In kompetenter zusammenarbeit *|
+|* In kompetenter Zusammenarbeit *|
 |*      entstanden mit den       *|
 |*     höchstqualifizierten      *|
 |*    Programmierern Martin,     *|
